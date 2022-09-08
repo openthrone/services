@@ -1,0 +1,430 @@
+/*=======  Process  =======*/
+.process-list {
+    li {
+        position: relative;
+        padding-left: 90px;
+        font-size: 14px;
+        z-index: 1;
+
+        &:not(:last-child) {
+            padding-bottom: 40px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 30px;
+                top: 0;
+                height: 100%;
+                width: 2px;
+                background-color: #f4f4f4;
+                z-index: -1;
+            }
+        }
+
+        h4 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .count {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4;
+            font-size: 16px;
+            font-weight: 700;
+            z-index: 2;
+        }
+    }
+}
+
+.process-box {
+    .thumb {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 280px;
+    }
+
+    .desc {
+        background-color: $white;
+        padding: 30px;
+        position: relative;
+
+        @include respond-below(sm) {
+            padding: 30px 20px;
+        }
+
+        .count {
+            position: absolute;
+            right: 30px;
+            top: 0;
+            transform: translateY(-50%);
+            height: 60px;
+            width: 60px;
+            background-color: $primary-color;
+            font-size: 16px;
+            font-weight: 700;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h4 {
+            font-size: 24px;
+            font-weight: 600;
+
+            @include respond-below(sm) {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.process-with-cta {
+    .process-boxes {
+        margin-bottom: -88px;
+        position: relative;
+        z-index: 2;
+
+        @include respond-below(sm) {
+            margin-bottom: -84px;
+        }
+    }
+
+    .process-cta {
+        padding-bottom: 100px;
+        padding-top: 140px;
+
+        .section-title .title {
+            letter-spacing: -1px;
+        }
+    }
+}
+
+.process-box-two {
+    text-align: center;
+    padding: 0 15px;
+
+    .count {
+        border-radius: 50%;
+        box-shadow: 0px 30px 60px 0px rgba(27, 170, 160, 0.06);
+        background-color: $white;
+        height: 150px;
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 60px;
+        font-family: $dms;
+        font-weight: 700;
+        color: $primary-color;
+        margin: 0 auto 40px;
+        position: relative;
+        z-index: 2;
+        line-height: 1;
+    }
+
+    h4 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .icon {
+        line-height: 1;
+        font-size: 120px;
+        color: #ececec;
+        margin-bottom: -50px;
+    }
+
+    &.primary-color-4 {
+        color: #878b95;
+
+        .count {
+            box-shadow: 0px 30px 60px 0px rgba(255, 130, 87, 0.1);
+            font-family: $pop;
+            color: $primary-color-4;
+        }
+
+        .icon {
+            color: #EDE3D9;
+        }
+
+        h4 {
+            @include respond-below(xl) {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.process-tab-section {
+    &.with-gradient-bg {
+        background: linear-gradient(
+            120deg,
+            rgb(238, 243, 255) 34%,
+            rgb(255, 239, 238) 100%
+        );
+    }
+}
+
+.process-tab {
+    .nav {
+        border: none;
+        justify-content: center;
+        margin: -15px;
+
+        @include respond-below(xl) {
+            margin: -5px;
+        }
+
+        .nav-item {
+            border: none;
+            margin: 0;
+            padding: 15px;
+
+            @include respond-below(xl) {
+                padding: 5px;
+            }
+
+            button {
+                padding: 15px 60px 15px 15px;
+                background-color: $white;
+                color: $secondary-color;
+                font-weight: 700;
+                font-family: $dms;
+                font-size: 16px;
+                line-height: 1;
+                border-radius: 10px;
+                border: none;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+
+                @include respond-below(xxl) {
+                    padding: 15px 30px 15px 15px;
+                }
+
+                @include respond-below(lg) {
+                    padding: 15px;
+                    font-size: 15px;
+                }
+
+                @include respond-below(sm) {
+                    font-size: 14px;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 4px;
+                    width: 50%;
+                    background-color: $primary-color;
+                    border-radius: 10px;
+                    z-index: -1;
+                    @include transition(0.3s);
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                i {
+                    font-size: 18px;
+                    height: 50px;
+                    width: 50px;
+                    text-align: center;
+                    line-height: 50px;
+                    border-radius: 10px;
+                    margin-right: 18px;
+                    background-color: $primary-color;
+                    color: $white;
+                    @include transition(0.3s);
+
+                    @include respond-below(lg) {
+                        margin-right: 10px;
+                        height: 40px;
+                        width: 40px;
+                        font-size: 16px;
+                        line-height: 40px;
+                    }
+                }
+
+                &.active,
+                &:hover {
+                    &::before {
+                        width: 100%;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &.analysis {
+                button {
+                    &::before {
+                        background-color: $primary-color-3-2;
+                    }
+
+                    i {
+                        background-color: #f5f6ff;
+                        color: $primary-color-3-2;
+                    }
+                }
+            }
+
+            &.building-edit {
+                button {
+                    &::before {
+                        background-color: #0fc50a;
+                    }
+                    i {
+                        background-color: #e9ffe8;
+                        color: #0fc50a;
+                    }
+                }
+            }
+
+            &.team-collab {
+                button {
+                    &::before {
+                        background-color: #f14040;
+                    }
+
+                    i {
+                        background-color: #fff4f4;
+                        color: #f14040;
+                    }
+                }
+            }
+
+            &.customize {
+                button {
+                    &::before {
+                        background-color: #1cd0db;
+                    }
+
+                    i {
+                        background-color: #f2feff;
+                        color: #1cd0db;
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        margin-top: 40px;
+    }
+
+    &.tab-version-two {
+        .nav .nav-item {
+            button {
+                padding: 35px;
+                background-color: $white;
+                box-shadow: 0px 30px 90px 0px rgba(164, 164, 164, 0.1);
+                font-size: 20px;
+                font-family: $pop;
+                font-weight: 600;
+                text-align: left;
+                color: $secondary-color-3;
+                border-radius: 0;
+                z-index: 1;
+                overflow: visible;
+                display: flex;
+                align-items: center;
+
+                @include respond-below(xxl) {
+                    padding: 20px;
+                    font-size: 18px;
+                }
+
+                i {
+                    height: 80px;
+                    width: 80px;
+                    line-height: 80px;
+                    font-size: 35px;
+                    margin-right: 25px;
+                    background-color: #e3f8fa;
+                    color: #26c6da;
+
+                    @include respond-below(xxl) {
+                        margin-right: 15px;
+                    }
+
+                    @include respond-below(xl) {
+                        width: 60px;
+                        height: 60px;
+                        line-height: 60px;
+                        font-size: 20px;
+                    }
+                }
+
+                .small-text {
+                    display: block;
+                    font-size: 14px;
+                    color: #878b95;
+                    font-family: $rob;
+                    margin-top: 15px;
+                    font-weight: 400;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    height: 20px;
+                    width: 20px;
+                    z-index: -1;
+                    background-color: #be63f9;
+                    transform: translate(-50%, 50%) rotate(225deg);
+                    clip-path: polygon(100% 0, 0 0, 0 100%);
+                    visibility: hidden;
+                    opacity: 1;
+                    @include transition(0.3s);
+
+                    @include respond-below(xl) {
+                        display: none;
+                    }
+                }
+
+                &::before {
+                    border-radius: 0;
+                    background-color: #be63f9;
+                }
+
+                &.active {
+                    i {
+                        color: #be63f9;
+                        background-color: #f5e6fe;
+                    }
+
+                    &::after {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .tab-img img {
+            box-shadow: 0px 30px 90px 0px rgba(164, 164, 164, 0.1);
+        }
+    }
+}
+
+.process-section {
+    &.with-primary-bg {
+        background-color: #fffaf6;
+    }
+}

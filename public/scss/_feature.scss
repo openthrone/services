@@ -1,0 +1,353 @@
+/*=======  Feature  =======*/
+.feature-box {
+    .feature-content {
+        padding: 40px 30px;
+        border: 2px solid #f1f1f1;
+        border-bottom: none;
+        border-radius: 10px 10px 0 0;
+        text-align: center;
+
+        @include respond-below(xl) {
+            padding: 40px 20px;
+        }
+
+        .feature-img {
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            font-size: 24px;
+            margin-bottom: 25px;
+
+            @include respond-below(xl) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .feature-link {
+        display: block;
+        border: 2px solid #f1f1f1;
+        color: #999;
+        padding: 20px 30px;
+        line-height: 1;
+        border-radius: 0 0 10px 10px;
+
+        i {
+            float: right;
+        }
+    }
+
+    &:hover {
+        .feature-link {
+            background-color: $primary-color-3-2;
+            color: $white;
+            border-color: $primary-color-3-2;
+        }
+    }
+}
+
+.feature-text-block {
+    .section-title {
+        margin-bottom: 20px;
+    }
+
+    .block-img {
+        @include respond-below(lg) {
+            margin-bottom: 50px;
+        }
+    }
+
+    .block-text {
+        font-family: $dms;
+
+        p:not(:last-of-type) {
+            margin-bottom: 30px;
+        }
+
+        .block-btn {
+            margin-top: 45px;
+            border-radius: 10px;
+            background-color: $primary-color-3-2;
+            color: $white;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: $dms;
+            padding: 20px 40px;
+            line-height: 1;
+            font-family: $dms;
+            @include transition(0.3s);
+
+            &:hover {
+                background-color: $primary-color-3;
+            }
+        }
+
+        &.color-2 {
+            .section-title .title-tag {
+                color: $primary-color-3;
+            }
+
+            .block-btn {
+                background-color: $primary-color-3;
+
+                &:hover {
+                    background-color: $primary-color-3-2;
+                }
+            }
+        }
+
+        &.color-3 {
+            .section-title .title-tag {
+                color: #7947f7;
+            }
+
+            .block-btn {
+                background-color: #7947f7;
+
+                &:hover {
+                    background-color: $primary-color-3;
+                }
+            }
+        }
+    }
+}
+
+.feature-box-two {
+    box-shadow: 0px 20px 60px 0px rgba(164, 164, 164, 0.1);
+    border: 2px solid transparent;
+    @include transition(0.3s);
+
+    .feature-content {
+        padding: 50px;
+        border-bottom: none;
+
+        @include respond-below(xxl) {
+            padding: 30px;
+        }
+
+        .feature-heading {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+
+            img {
+                @include respond-below(xl) {
+                    max-width: 60px;
+                }
+            }
+
+            h4 {
+                font-size: 20px;
+                margin-left: 25px;
+                line-height: 1.3;
+
+                @include respond-below(xl) {
+                    font-size: 18px;
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        ul {
+            margin-top: 15px;
+
+            li {
+                float: left;
+                width: 50%;
+                margin-top: 15px;
+                padding-left: 10px;
+                position: relative;
+
+                @include respond-below(xl) {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "-";
+                    left: 0;
+                    top: 0;
+                    color: $primary-color-4;
+                }
+            }
+        }
+    }
+
+    .feature-link {
+        display: block;
+        border-top: 2px solid #f1f1f1;
+        color: #999;
+        padding: 20px 50px;
+        line-height: 1;
+
+        i {
+            float: right;
+        }
+    }
+
+    &:hover {
+        box-shadow: none;
+        border-color: #f5f5f5;
+
+        .feature-link {
+            color: $primary-color-4;
+        }
+    }
+}
+
+.feature-text-block-two {
+    &.feature-shape-bg {
+        background-image: url(../img/feature/feature-shape.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-top: 140px;
+        padding-bottom: 140px;
+
+        @include respond-below(lg) {
+            background-position: center bottom;
+        }
+
+        @include respond-below(md) {
+            padding-top: 0;
+            padding-bottom: 120px;
+        }
+    }
+
+    .big-text {
+        font-size: 20px;
+        color: #666e82;
+
+        @include respond-below(xl) {
+            font-size: 18px;
+        }
+    }
+
+    .chech-list {
+        li {
+            font-size: 18px;
+            color: #878b95;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            i {
+                border-radius: 50%;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 8px 16px 0px rgba(164, 164, 164, 0.1);
+                width: 36px;
+                height: 36px;
+                color: $primary-color-4;
+                text-align: center;
+                line-height: 35px;
+                margin-right: 30px;
+
+                @include respond-below(sm) {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .block-btn {
+        background-color: $primary-color-4;
+        padding: 18px 33px;
+        border: 1px solid transparent;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 700;
+        color: $white;
+        line-height: 1;
+        margin-top: 30px;
+
+        &:hover {
+            background-color: $secondary-color-3;
+        }
+    }
+}
+
+.feature-box-three {
+    background-color: #fffaf6;
+    padding: 40px;
+    @include transition(0.3s);
+
+    @include respond-below(xxl) {
+        padding: 30px;
+    }
+
+    .feature-heading {
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+
+        @include respond-between(lg, xl) {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        i {
+            height: 60px;
+            min-width: 60px;
+            color: $secondary-color-3;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 50%;
+            font-size: 30px;
+            box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.04);
+            background-color: $white;
+            @include transition(0.3s);
+
+            @include respond-between(lg, xl) {
+                margin-bottom: 15px;
+            }
+        }
+
+        h4 {
+            font-size: 20px;
+            margin-left: 25px;
+            @include transition(0.3s);
+            line-height: 1.3;
+
+            @include respond-below(xxl) {
+                font-size: 18px;
+                margin-left: 15px;
+            }
+
+            @include respond-between(lg, xl) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .feature-content {
+        color: #666e82;
+        @include transition(0.3s);
+
+        @include respond-below(xl) {
+            font-size: 15px;
+        }
+    }
+
+    &.active {
+        background-color: $primary-color-4;
+
+        .feature-heading {
+            i {
+                color: $primary-color-4;
+            }
+
+            h4 {
+                color: $white;
+            }
+        }
+
+        .feature-content {
+            p {
+                color: $white;
+            }
+        }
+    }
+}

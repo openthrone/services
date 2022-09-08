@@ -1,0 +1,367 @@
+/*=======  Latest News  =======*/
+.news-section {
+    &.extra-gap-top {
+        padding-top: 220px;
+        padding-bottom: 120px;
+
+        @include respond-below(lg) {
+            padding-top: 180px;
+            padding-bottom: 120px;
+        }
+    }
+}
+
+.latest-news-boxes {
+    .post-meta {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 10px;
+
+        i {
+            margin-right: 5px;
+        }
+
+        a {
+            color: $text-color;
+        }
+
+        .admin {
+            position: relative;
+            margin-left: 20px;
+            padding-left: 20px;
+
+            @include respond-below(xl) {
+                padding-left: 10px;
+                margin-left: 10px;
+            }
+
+            &::before {
+                content: "|";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                color: $text-color;
+                line-height: 1;
+            }
+
+            a {
+                color: $primary-color-2;
+            }
+        }
+    }
+
+    .content {
+        background-color: $white;
+        padding: 35px;
+
+        h4 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.4;
+
+            @include respond-below(xxl) {
+                font-size: 22px;
+            }
+
+            @include respond-below(lg) {
+                font-size: 20px;
+            }
+
+            a {
+                color: $secondary-color;
+
+                &:hover {
+                    color: $primary-color-2;
+                }
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+    }
+
+    .news-thumb {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 275px;
+    }
+
+    .latest-news-side {
+        padding: 35px 35px 70px;
+        background-color: $white;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 25px;
+
+        @include respond-below(xl) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include respond-below(md) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .single-side-box {
+            display: flex;
+            align-items: center;
+
+            @include respond-below(lg) {
+                display: block;
+            }
+
+            @include respond-between(sm, md) {
+                display: flex;
+            }
+
+            .news-thumb {
+                height: 100px;
+                width: 100px;
+                flex: 0 0 100px;
+                margin-right: 20px;
+
+                @include respond-below(xl) {
+                    width: 80px;
+                    height: 80px;
+                    flex: 0 0 80px;
+                }
+
+                @include respond-below(lg) {
+                    width: 120px;
+                    height: 120px;
+                    flex: 0 0 120px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .post-meta {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+
+            .content {
+                padding: 0;
+
+                h4 {
+                    font-size: 22px;
+                    margin: 0;
+                    @include respond-below(xxl) {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .load-more-btn {
+            line-height: 1;
+            background-color: $primary-color-2;
+            color: $white;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 15px 35px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 50%);
+
+            @include respond-below(sm) {
+                padding: 15px;
+            }
+
+            &:hover {
+                background-color: $white;
+                color: $secondary-color;
+                box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.06);
+            }
+
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &.boxes-primary-color {
+        .post-meta .admin a,
+        .content h4 a:hover {
+            color: $primary-color;
+        }
+
+        .latest-news-side .load-more-btn {
+            background-color: $primary-color;
+
+            &:hover {
+                background-color: $secondary-color;
+                color: $white;
+            }
+        }
+    }
+
+    &.news-style-three {
+        .content {
+            border: 2px solid #ececec;
+            border-radius: 0 0 10px 10px;
+            @include transition(0.3s);
+        }
+
+        .latest-news-box:hover {
+            .content {
+                box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.06);
+            }
+        }
+
+        .latest-news-side {
+            border: 2px solid #ececec;
+            box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.06);
+            border-radius: 10px;
+
+            .content {
+                border: none;
+            }
+
+            .load-more-btn {
+                background-color: $primary-color-3-2;
+                border-radius: 10px;
+                padding: 20px 35px;
+
+                &:hover {
+                    background-color: $primary-color-3;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.boxes-with-border {
+        .content {
+            border: 2px solid #f5f5f5;
+        }
+
+        .latest-news-side {
+            border: 2px solid #f5f5f5;
+
+            .content {
+                border: none;
+            }
+        }
+    }
+
+    &.news-style-four {
+        .latest-news-box {
+            box-shadow: 0px 30px 60px 0px rgba(255, 130, 87, 0.1);
+            margin-bottom: 30px;
+            margin-top: 50px;
+        }
+
+        .post-meta {
+
+            @include respond-below(sm) {
+                display: block;
+            }
+
+            .cates {
+                position: relative;
+                margin-left: 20px;
+                padding-left: 20px;
+
+                @include respond-below(xl) {
+                    padding-left: 10px;
+                    margin-left: 10px;
+                }
+
+                @include respond-below(sm) {
+                   padding-left: 0;
+                   margin-left: 0;
+                   padding-top: 20px;
+                }
+
+                &::before {
+                    content: "|";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    color: $text-color;
+                    line-height: 1;
+
+                    @include respond-below(sm) {
+                        top: 5px;
+                        left: 5px;
+                        transform: translate(0) rotate(90deg);
+                    }
+                }
+
+                a {
+                    color: $primary-color-4;
+
+                    &:last-child {
+                        padding-left: 6px;
+                        display: inline-block;
+                        position: relative;
+
+                        &::before {
+                            content: ",";
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
+                            color: $primary-color-4;
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .content {
+            padding: 40px 35px 65px 35px;
+            border: 2px solid #ffeae3;
+            border-top: none;
+            background-color: $white;
+            position: relative;
+
+            h4 {
+                font-weight: 600;
+                margin: 0;
+
+                @include respond-below(lg) {
+                    font-size: 18px;
+                }
+
+                a:hover {
+                    color: $primary-color-4;
+                }
+            }
+
+            .post-author {
+                background-color: $white;
+                border-radius: 30px;
+                position: absolute;
+                padding: 10px 40px 10px 40px;
+                display: flex;
+                align-items: center;
+                left: 50px;
+                bottom: -30px;
+
+                img {
+                    max-width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin-right: 15px;
+                }
+
+                span.name {
+                    font-weight: 700;
+                    color: $primary-color-3-2;
+                }
+            }
+        }
+    }
+}

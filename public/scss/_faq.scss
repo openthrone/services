@@ -1,0 +1,77 @@
+/*=======  FAQ  =======*/
+.accordion.faq-accordion {
+    .accordion-collapse {
+        border: none;
+    }
+
+    .accordion-header {
+        .accordion-button {
+            border: none;
+            border-radius: 0;
+            padding: 20px 30px 20px 105px;
+            font-size: 18px;
+            font-weight: 400;
+            font-style: normal;
+            color: $text-color;
+            font-family: $rob;
+            background-color: #f8f8f8;
+            text-align: left;
+
+            @include respond-below(md) {
+                padding: 20px 30px 20px 90px;
+                font-size: 16px;
+            }
+
+            @include respond-below(sm) {
+                padding: 15px 20px 15px 70px;
+                font-size: 16px;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &::after {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 60px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                color: $text-color;
+                transform: rotate(0);
+                background: #ededed;
+                content: "\f067";
+                z-index: 2;
+                font-weight: 300;
+                font-family: "Font Awesome 5 Pro";
+                @include transition(0.3s);
+
+                @include respond-below(sm) {
+                    width: 50px;
+                }
+            }
+
+            &:not(.collapsed) {
+                background-color: #ededed;
+
+                &::after {
+                    background: #e0e0e0;
+                    content: "\f068";
+                }
+            }
+        }
+    }
+
+    .accordion-body {
+        background-color: #fafafa;
+        padding: 30px;
+    }
+
+    .accordion-item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}

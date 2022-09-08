@@ -1,0 +1,221 @@
+/*=======  Pricing  =======*/
+.pricing-plan-box {
+    background-color: $white;
+    padding: 60px 65px;
+
+    @include respond-below(xxl) {
+        padding: 60px 50px;
+    }
+
+    @include respond-below(sm) {
+        padding: 50px 30px;
+    }
+
+    .pricing-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    .pricing-icon {
+        max-width: 60px;
+    }
+
+    .price-wrap {
+        display: block;
+        line-height: 1;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -1px;
+
+        .price {
+            font-size: 100px;
+
+            @include respond-below(sm) {
+                font-size: 80px;
+            }
+        }
+
+        .price,
+        .currency {
+            color: $primary-color;
+        }
+
+        .price-suffix {
+            color: #d8d8d8;
+        }
+    }
+
+    .pricing-limit {
+        display: block;
+        font-size: 14px;
+        color: $text-color;
+        line-height: 1;
+        margin-top: 5px;
+    }
+
+    .pricing-content {
+        ul li {
+            color: $secondary-color;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            i {
+                float: right;
+                color: #b4b4b4;
+            }
+        }
+
+        .main-btn {
+            margin-top: 40px;
+        }
+    }
+
+    &.featured-box {
+        .main-btn-3 {
+            color: $white;
+
+            &::before {
+                opacity: 1;
+                visibility: visible;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.pricing-plan-box-two {
+    position: relative;
+    background-color: $white;
+    padding: 60px 65px;
+    max-width: 405px;
+
+    @include respond-below(md) {
+        max-width: 100%;
+    }
+
+    @include respond-below(sm) {
+        padding: 50px 30px;
+    }
+
+    .pricing-content {
+        ul li {
+            color: $secondary-color;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            i {
+                float: right;
+                color: #b4b4b4;
+            }
+        }
+    }
+
+    .pricing-header {
+        .price-title {
+            margin-bottom: 13px;
+
+            h3 {
+                font-size: 30px;
+                margin-bottom: 5px;
+            }
+
+            p.duration {
+                font-size: 14px;
+            }
+        }
+
+        .price-wrap {
+
+            .price {
+                font-size: 100px;
+                font-weight: 700;
+
+                @include respond-below(sm) {
+                    font-size: 80px;
+                }
+            }
+
+            .price,
+            .currency {
+                color: $primary-color;
+                line-height: 0.8;
+            }
+
+            .price-suffix {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .pricing-content {
+        ul li {
+            color: $secondary-color;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            i {
+                float: right;
+                color: #b4b4b4;
+            }
+        }
+
+        .main-btn {
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+    }
+
+    &.pricing-box-one {
+        background-color: $primary-color;
+
+        .pricing-header {
+            .price-title {
+                h3,
+                p.duration {
+                    color: $white;
+                }
+            }
+
+            .price-wrap {
+                span {
+                    color: $white;
+                }
+            }
+        }
+
+        .pricing-content {
+            ul li {
+                color: $white;
+                i {
+                    color: $white;
+                }
+            }
+
+            .main-btn-3 {
+                &:hover {
+                    &:before {
+                        background-color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &.pricing-box-two {
+        margin-left: -55px;
+        box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.06);
+
+        @include respond-below(md) {
+            margin-left: 0;
+            margin-top: 40px;
+        }
+    }
+}

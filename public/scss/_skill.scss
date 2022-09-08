@@ -1,0 +1,327 @@
+/*=======  Skill  =======*/
+.progress-bars {
+    .single-progress {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            color: $secondary-color;
+            font-family: $pfd;
+            margin-bottom: 25px;
+            position: relative;
+
+            .progress-counter {
+                font-size: 16px;
+                font-weight: 700;
+                font-family: $rob;
+                color: $primary-color;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 2;
+            }
+        }
+
+        .progressbar-wrap {
+            background-color: #e8f6f5;
+            height: 4px;
+            width: 100%;
+            position: relative;
+
+            .progressbar {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 9px;
+                width: 0;
+                background-color: $primary-color;
+                box-shadow: 0px 4px 8px 0px rgba(27, 170, 160, 0.3);
+                transition: width 2s ease-in-out;
+            }
+        }
+    }
+
+    &.progress-bars-two {
+        .single-progress {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            .title {
+                margin-bottom: 15px;
+                font-family: $rob;
+                font-size: 16px;
+            }
+
+            .progressbar {
+                box-shadow: none;
+                height: 4px;
+            }
+        }
+    }
+}
+
+.skillset-video {
+    position: relative;
+    height: 570px;
+    overflow: hidden;
+
+    @include respond-below(lg) {
+        height: 380px;
+    }
+
+    @include respond-below(md) {
+        height: 320px;
+    }
+
+    .popup-btn {
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        background-color: $white;
+        color: $primary-color;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        @include transition(0.4s);
+        opacity: 0;
+        visibility: hidden;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $white;
+        }
+
+        @include respond-below(xl) {
+            height: 100px;
+            width: 100px;
+        }
+
+        @include respond-below(lg) {
+            height: 80px;
+            width: 80px;
+        }
+    }
+
+    .video-bg {
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        @include transition(0.4s);
+    }
+
+    &:hover,
+    &.active {
+        .popup-btn {
+            visibility: visible;
+            opacity: 1;
+            top: 50%;
+        }
+    }
+}
+
+.skillset-videos-slider {
+    .skillset-video {
+        height: 540px;
+
+        @include respond-below(lg) {
+            height: 500px;
+        }
+
+        @include respond-below(md) {
+            height: 380px;
+        }
+    }
+
+    .slick-current {
+        .skillset-video {
+            .popup-btn {
+                visibility: visible;
+                opacity: 1;
+                top: 50%;
+            }
+        }
+    }
+}
+
+.skill-section {
+    &.with-absolute-image {
+        position: relative;
+        padding-top: 180px;
+        padding-bottom: 120px;
+        margin-top: -60px;
+        z-index: 1;
+
+        @include respond-below(lg) {
+            padding-top: 470px;
+            padding-bottom: 120px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: calc(50% - 15px);
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img//skillset/03.jpg);
+
+            @include respond-below(lg) {
+                width: 100%;
+                height: 420px;
+            }
+        }
+
+        .skill-text {
+            padding-left: 65px;
+
+            @include respond-below(xl) {
+                padding-left: 30px;
+            }
+
+            @include respond-below(lg) {
+                padding-left: 0;
+            }
+        }
+    }
+
+    &.with-gallery {
+        .skill-section-top {
+            padding-top: 120px;
+            padding-bottom: 320px;
+            margin-bottom: -200px;
+
+            @include respond-below(lg) {
+                padding-bottom: 250px;
+                margin-bottom: -130px;
+            }
+        }
+    }
+}
+
+.pie-charts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 120px;
+    position: relative;
+    overflow: hidden;
+
+    @include respond-below(xxl) {
+        gap: 80px;
+    }
+
+    @include respond-below(xl) {
+        gap: 60px;
+    }
+
+    @include respond-below(lg) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-below(md) {
+        gap: 50px;
+    }
+
+    @include respond-below(sm) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &.two-box {
+        grid-template-columns: repeat(2, 1fr);
+
+        @include respond-below(sm) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .single-pie-chart {
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.8;
+        position: relative;
+
+        .chart {
+            height: 120px;
+            width: 120px;
+            text-align: center;
+            position: relative;
+            margin: 0 auto 20px;
+
+            span {
+                position: absolute;
+                font-size: 36px;
+                font-weight: 500;
+                color: $secondary-color;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                line-height: 1;
+
+                &::after {
+                    content: "%";
+                    color: $primary-color;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+
+            @include respond-below(xl) {
+                font-size: 22px;
+            }
+        }
+
+        &:not(:last-child) {
+            &::before {
+                position: absolute;
+                top: 50%;
+                right: -60px;
+                transform: translateY(-50%);
+                width: 2px;
+                height: 100px;
+                background-color: #e6e6e6;
+                content: "";
+
+                @include respond-below(xxl) {
+                    right: -40px;
+                }
+
+                @include respond-below(xl) {
+                    right: -30px;
+                }
+
+                @include respond-below(md) {
+                    right: -25px;
+                }
+
+                @include respond-below(sm) {
+                    height: 2px;
+                    width: 100px;
+                    right: 50%;
+                    top: auto;
+                    bottom: -25px;
+                    transform: translateX(50%);
+                }
+            }
+        }
+    }
+}

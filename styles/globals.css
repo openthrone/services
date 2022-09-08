@@ -1,0 +1,29 @@
+@import "../public/css/animate.min.css";
+@import "../public/css/bootstrap.min.css";
+@import "../public/css/download.css";
+@import "../public/css/flaticon";
+@import "../public/css/font-awesome.min";
+@import "../public/css/magnific-popup";
+@import "../public/css/nice-select";
+@import "../public/css/slick";
+@import "../public/css/slick.css";
+@import "../public/css/style.css";
+@import "../node_modules/react-modal-video/css/modal-video";
+@import "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css";
+
+.owl-carousel {
+  display: block !important;
+}
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .main-menu {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
