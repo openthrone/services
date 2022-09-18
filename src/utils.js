@@ -28,6 +28,6 @@ export const validUrl = (str) => {
 };
 
 
-export const BASE_URL = "https://intro-openthrone.herokuapp.com"
+export const BASE_URL = "https://otblockbridgeapi.azurewebsites.net"
 
 

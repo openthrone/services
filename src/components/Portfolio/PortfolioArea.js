@@ -38,7 +38,7 @@ const PortfolioArea = () => {
       try {
         var config = {
           method: "get",
-          url: "https://intro-openthrone.herokuapp.com/api/portfolio",
+          url: `${BASE_URL}/api/portfolio`,
           headers: {},
         };
         axios(config)
