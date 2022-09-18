@@ -73,9 +73,7 @@ const Footer1 = () => {
               <div className="widget about-widget">
                 <h5 className="widget-title">About us.</h5>
                 <p>
-                  We provide every digital services to make your business go
-                  online. Our services ranges from Website Developement, NFTs
-                  Creation, Content Writing, Chat Bots Integration, etc.
+                  We provide best software development services ranging from Mobile Apps, Website and Blockchain Softwares.
                 </p>
               </div>
             </div>
@@ -94,7 +92,7 @@ const Footer1 = () => {
                     <Link href="/service">Software Development</Link>
                   </li>
                   <li>
-                    <Link href="/service">SEO Optimization</Link>
+                    <Link href="/service">Blockchain Development</Link>
                   </li>
                   <li>
                     <Link href="/service">
@@ -105,16 +103,13 @@ const Footer1 = () => {
                     <Link href="/service">Website Development</Link>
                   </li>
                   <li>
-                    <Link href="/service">NFTs Creation</Link>
+                    <Link href="/service">Mobile Apps</Link>
                   </li>
                   <li>
                     <Link href="/service">Chat Bots</Link>
                   </li>
                   <li>
                     <Link href="/service">Fast Web Hosting Services</Link>
-                  </li>
-                  <li>
-                    <Link href="/service">Content Writing</Link>
                   </li>
                   <li>
                     <Link href="/service">WordPress Development</Link>
@@ -145,10 +140,10 @@ const Footer1 = () => {
                   <li>
                     <i className="fal fa-envelope" />
                     <span>Email:</span>{" "}
-                    <CopyToClipboard text="kunal@openthrone.io">
+                    <CopyToClipboard text="contactblockbridge@gmail.com">
                       <ToolTip text={copied ? "Copied!" : "Copy"}>
                         {copied ? console.log("Copied") : console.log("Coyp")}
-                        <span onClick={handleCopy}>kunal@openthrone.io</span>
+                        <span onClick={handleCopy}>contactblockbridge@gmail.com</span>
                       </ToolTip>
                     </CopyToClipboard>
                   </li>

@@ -93,14 +93,14 @@ const ContactArea = () => {
                   </li>
                   <li style={{ fontSize: "16px" }}>
                     <CopyToClipboard
-                      text="contact@openthrone.io"
+                      text="contactblockbridge@gmail.com"
                       onCopy={() => handleCopy}
                     >
                       <ToolTip text={copied ? "Copied!" : "Copy"}>
                         {copied ? console.log("Copied") : console.log("Coyp")}
                         <i className="fal fa-envelope" />
                         <span style={{ fontSize: "16px" }} onClick={handleCopy}>
-                          contact@openthrone.io
+                          contactblockbridge@gmail.com
                         </span>
                       </ToolTip>
                     </CopyToClipboard>
