@@ -12,6 +12,7 @@ import Service2Area from "../src/components/Service-2/Service2Area";
 export default function Home() {
   return (
     <>
+
       {/*====== Header Start ======*/}
       <HomeHeader />
       {/*====== Header End ======*/}

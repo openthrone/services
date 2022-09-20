@@ -6,32 +6,14 @@ import { NotificationsProvider } from "@mantine/notifications";
 import { MantineProvider } from "@mantine/core";
 import { init } from "@socialgouv/matomo-next";
 import {AuthProvider} from '../context/AuthProvider'
-
+import FloatingWhatsApp from 'react-floating-whatsapp'
 const MATOMO_URL = "https://openthrone.matomo.cloud/";
 const MATOMO_SITE_ID = "1";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     window.addEventListener("scroll", stickyNav);
-    // Chat Bot - REXIS
-    initTiledesk();
-
-    function initTiledesk() {
-      console.log("initTiledesk");
-
-      window.tiledeskSettings = {
-        projectid: "6281bb2bb8d8ed0019f717af",
-      };
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://widget.tiledesk.com/v4/launch.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "tiledesk-jssdk");
-    }
+    
   });
 
   useEffect(() => {
@@ -40,6 +22,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      
       <Head>
         <title> Welcome - BlockBridge - Build Modern Software </title>
         <link rel="shortcut icon" href="/img/favicon.ico" type="img/png" />
@@ -121,6 +104,7 @@ function MyApp({ Component, pageProps }) {
         <NotificationsProvider position="bottom-left">
         <AuthProvider>
           <div>
+          <FloatingWhatsApp phoneNumber="916377441877" accountName="Abhay Agarwal, Co-Founder" avatar="https://www.openthrone.io/static/media/abhayagarwal.af684f8e48f04bb80d38.jpeg" statusMessage="Available" />
             <Component {...pageProps} />
           </div>
           </AuthProvider>
