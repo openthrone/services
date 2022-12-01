@@ -104,14 +104,7 @@ function MyApp({ Component, pageProps }) {
       <MantineProvider>
         <NotificationsProvider position="bottom-left">
         <AuthProvider>
-          <div>
-          <Link href="https://web.whatsapp.com/send?phone=916377441877">
-            <a target={"_blank"}>
-          <FloatingWhatsApp phoneNumber="916377441877" accountName="Abhay Agarwal, Co-Founder" avatar="https://www.openthrone.io/static/media/abhayagarwal.af684f8e48f04bb80d38.jpeg" statusMessage="Available" />
-          </a>
-          </Link>
             <Component {...pageProps} />
-          </div>
           </AuthProvider>
         </NotificationsProvider>
       </MantineProvider>
