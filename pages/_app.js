@@ -9,8 +9,9 @@ import {AuthProvider} from '../context/AuthProvider'
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     window.addEventListener("scroll", stickyNav);
-    
   });
+
+  
 
   return (
     <>
@@ -41,7 +42,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           itemProp="image"
-          content="https://services.openthrone.io/img/logo-4.png"
+          content="https://blockbridge.in/img/logo-4.png"
         />
         <meta property="og:type" content="website" />
 
@@ -54,33 +55,13 @@ function MyApp({ Component, pageProps }) {
 
         <meta
           property="og:image"
-          content="https://services.openthrone.io/img/logo-4.png"
+          content="https://blockbridge.in/img/logo-4.png"
         />
-        <meta property="og:url" content="https://services.openthrone.io" />
+        <meta property="og:url" content="https://blockbridge.in" />
 
         <meta property="og:site_name" content="blockbridge.in" />
 
-        <meta property="instagram:card" content="summary" />
-        <meta
-          property="instagram:site"
-          content="https://www.instagram.com/openthrone/"
-        />
-
-        <meta property="instagram:title" content="BlockBridge " />
-
-        <meta
-          property="instagram:description"
-          content="Build Modern Software Development Company"
-        />
-
-        <meta
-          property="instagram:image"
-          content="https://services.openthrone.io/img/logo-4.png"
-        />
-        <meta
-          property="instagram:url"
-          content="https://instagram.com/itsopenthrone"
-        />
+        
         <link rel="canonical" href="https://blockbridge.in" />
         <link
           rel="alternate"

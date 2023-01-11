@@ -14,13 +14,12 @@ const MATOMO_URL = "https://analytics.aivinya.com";
 const MATOMO_SITE_ID = "4";
 
 export default function Home() {
-
-  useEffect(() => {
+  useEffect(()=>{
+    // matomo
     console.log("Analytics on...")
     init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID });
-  }, []);
-
-
+  },[])
+  
   useEffect(()=>{
     // tiledesk
     function initTiledesk() {

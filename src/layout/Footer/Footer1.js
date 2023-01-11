@@ -40,28 +40,6 @@ const Footer1 = () => {
                   </a>
                 </Link>
               </li>
-              <li>
-                <Link href="https://twitter.com/itsopenthrone">
-                  <a
-                    onClick={(e) => {
-                      e.preventDefault();
-                    }}
-                  >
-                    <i className="fab fa-twitter" />
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="https://www.linkedin.com/company/openthrone">
-                  <a
-                    onClick={(e) => {
-                      e.preventDefault();
-                    }}
-                  >
-                    <i className="fab fa-linkedin" />
-                  </a>
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

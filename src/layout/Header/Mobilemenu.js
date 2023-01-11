@@ -35,7 +35,7 @@ const Mobilemenu = () => {
                         margintTop: "20px",
                       }}
                       src="/img/logo-4.png"
-                      alt="Services-OpenThrone"
+                      alt="BlockBridge"
                     />
                   </a>
                 </Link>

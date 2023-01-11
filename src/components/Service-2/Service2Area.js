@@ -100,7 +100,7 @@ const Service2Area = () => {
             <div className="col-lg-3 col-md-6 col-sm-12 service-column">
               <div className="service-box-three">
                 <div className="icon">
-                  <img src="/img/saas.png" atl="OpenThrone-Service" />
+                  <img src="/img/saas.png" atl="BlockBridge" />
                 </div>
                 <h4 className="title">
                   <Link href="">

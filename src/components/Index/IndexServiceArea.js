@@ -60,7 +60,7 @@ const IndexServiceArea = () => {
                 <div className="col-lg-3 col-md-6 col-sm-12 service-column">
                     <div className="service-box-three">
                         <div className="icon">
-                        <img src="/img/service/nft.svg"  atl="OpenThrone-Service"/>
+                        <img src="/img/service/nft.svg"  atl="BlockBridge"/>
                         </div>
                         <h4 className="title">
                             <Link href="">

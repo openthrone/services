@@ -1,5 +1,5 @@
 {
-  "name": "services-openthrone",
+  "name": "services-blockbridge",
   "private": true,
   "scripts": {
     "dev": "HOST=0.0.0.0 && next dev",
