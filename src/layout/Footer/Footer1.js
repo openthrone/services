@@ -30,7 +30,7 @@ const Footer1 = () => {
             </div>
             <ul className="social-icon">
               <li>
-                <Link href="https://web.whatsapp.com/send?phone=916377441877">
+                <Link href="https://web.whatsapp.com/send?phone=917014114843">
                   <a
                     onClick={(e) => {
                       e.preventDefault();
@@ -128,22 +128,22 @@ const Footer1 = () => {
                     <i className="fal fa-phone" />
                     <span>Phone:</span>{" "}
                     <CopyToClipboard
-                      text="+91-6377441877"
+                      text="+91-7014114843"
                       onCopy={() => handleCopy}
                     >
                       <ToolTip text={copied ? "Copied!" : "Copy"}>
                         {copied ? console.log("Copied") : console.log("Coyp")}
-                        <span onClick={handleCopy}>+91-6377441877</span>
+                        <span onClick={handleCopy}>+91-7014114843</span>
                       </ToolTip>
                     </CopyToClipboard>
                   </li>
                   <li>
                     <i className="fal fa-envelope" />
                     <span>Email:</span>{" "}
-                    <CopyToClipboard text="contactblockbridge@gmail.com">
+                    <CopyToClipboard text="support@blockbridge.in">
                       <ToolTip text={copied ? "Copied!" : "Copy"}>
                         {copied ? console.log("Copied") : console.log("Coyp")}
-                        <span onClick={handleCopy}>contactblockbridge@gmail.com</span>
+                        <span onClick={handleCopy}>support@blockbridge.in</span>
                       </ToolTip>
                     </CopyToClipboard>
                   </li>

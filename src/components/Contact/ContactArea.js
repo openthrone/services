@@ -79,28 +79,28 @@ const ContactArea = () => {
                 <ul>
                   <li>
                     <CopyToClipboard
-                      text="+91-6377441877"
+                      text="+91-7014114843"
                       onCopy={() => handleCopy}
                     >
                       <ToolTip text={copied ? "Copied!" : "Copy"}>
                         {copied ? console.log("Copied") : console.log("Coyp")}
                         <i className="fal fa-phone" />
                         <span style={{ fontSize: "16px" }} onClick={handleCopy}>
-                          +91-6377441877
+                          +91-7014114843
                         </span>
                       </ToolTip>
                     </CopyToClipboard>
                   </li>
                   <li style={{ fontSize: "16px" }}>
                     <CopyToClipboard
-                      text="contactblockbridge@gmail.com"
+                      text="support@blockbridge.in"
                       onCopy={() => handleCopy}
                     >
                       <ToolTip text={copied ? "Copied!" : "Copy"}>
                         {copied ? console.log("Copied") : console.log("Coyp")}
                         <i className="fal fa-envelope" />
                         <span style={{ fontSize: "16px" }} onClick={handleCopy}>
-                          contactblockbridge@gmail.com
+                          support@blockbridge.in
                         </span>
                       </ToolTip>
                     </CopyToClipboard>
@@ -137,12 +137,12 @@ const ContactArea = () => {
                 <input
                   type="phone"
                   name="name"
-                  value={name}
                   required
+                  value={name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  placeholder="Enter Mobile Number : "
+                  placeholder="Enter Email: "
                 />
               </div>
               <div className="col-12 mb-30">
