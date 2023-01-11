@@ -4,41 +4,13 @@ import { stickyNav } from "../src/utils";
 import "../styles/globals.css";
 import { NotificationsProvider } from "@mantine/notifications";
 import { MantineProvider } from "@mantine/core";
-import { init } from "@socialgouv/matomo-next";
 import {AuthProvider} from '../context/AuthProvider'
-import FloatingWhatsApp from 'react-floating-whatsapp'
-const MATOMO_URL = "https://analytics.aivinya.com";
-const MATOMO_SITE_ID = "4";
-import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     window.addEventListener("scroll", stickyNav);
     
   });
-
-  useEffect(() => {
-    init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID });
-    // tiledesk
-    function initTiledesk() {
-      console.log('initTiledesk');
-
-      window.tiledeskSettings = {
-        projectid: "635a41fc85de9f001ae6dcea"
-      };
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://widget.tiledesk.com/v4/launch.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, 'script', 'tiledesk-jssdk');
-    }
-
-    initTiledesk();
-  }, []);
 
   return (
     <>
