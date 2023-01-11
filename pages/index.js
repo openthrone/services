@@ -19,26 +19,26 @@ export default function Home() {
     console.log("Analytics on...")
     init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID });
   },[])
+
+
+  function initTiledesk() {
+    console.log('initTiledesk');
+
+    window.tiledeskSettings = {
+      projectid: "63be9c45e4849f0019042266"
+    };
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://widget.tiledesk.com/v4/launch.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, 'script', 'tiledesk-jssdk');
+  }
   
   useEffect(()=>{
     // tiledesk
-    function initTiledesk() {
-      console.log('initTiledesk');
-
-      window.tiledeskSettings = {
-        projectid: "635a41fc85de9f001ae6dcea"
-      };
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://widget.tiledesk.com/v4/launch.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, 'script', 'tiledesk-jssdk');
-    }
-
     initTiledesk();
   },[])
   return (
